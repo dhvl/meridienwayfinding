@@ -1,5 +1,19 @@
-.tmp/
+# Next.js
+.next/
+out/
+build/
+dist/
+
+# Dependencies
+node_modules/
+
+# Environment and sensitive data
 .env
+.env*.local
 credentials.json
 token.json
+
+# Temporary files
+.tmp/
 .DS_Store
+*.log

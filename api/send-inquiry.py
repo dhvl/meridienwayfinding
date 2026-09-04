@@ -21,7 +21,7 @@ class handler(BaseHTTPRequestHandler):
         name = data.get('name', '').strip()
         email = data.get('email', '').strip()
         message = data.get('message', '').strip()
-        contact_email = os.getenv("CONTACT_EMAIL", "info@meridienwayfinding.co.uk")
+        contact_email = os.getenv("CONTACT_EMAIL", "info@meridianwayfinding.co.uk")
 
         if not name or not email or not message:
             self.send_response(400)

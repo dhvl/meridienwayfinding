@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Capability | Meridian Wayfinding</title>
+<meta name="description" content="Materials, manufacturing capability and compliance management for bespoke architectural wayfinding — aluminium, ACM, stainless steel, tactile and illuminated signage systems.">
+<meta name="keywords" content="wayfinding manufacturing, ACM signage, aluminium signage, DDA compliant signage, fire rated signage, tactile braille signage">
+<link rel="canonical" href="https://www.meridianwayfinding.co.uk/capability.html">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Capability | Meridian Wayfinding">
+<meta property="og:description" content="Materials, manufacturing capability and compliance management for bespoke architectural wayfinding — aluminium, ACM, stainless steel, tactile and illuminated signage systems.">
+<meta property="og:url" content="https://www.meridianwayfinding.co.uk/capability.html">
+<meta property="og:site_name" content="Meridian Wayfinding">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Capability | Meridian Wayfinding">
+<meta name="twitter:description" content="Materials, manufacturing capability and compliance management for bespoke architectural wayfinding — aluminium, ACM, stainless steel, tactile and illuminated signage systems.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#14213D;
+    --gold:#C6A15B;
+    --slate:#5B6472;
+    --paper:#FFFFFF;
+    --mist:#F1F3F6;
+    --line:#DDE1E6;
+    --ff-display:'Cormorant Garamond', serif;
+    --ff-body:'Inter', sans-serif;
+    --ff-mono:'IBM Plex Mono', monospace;
+  }
+  *{ margin:0; padding:0; box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{
+    font-family:var(--ff-body);
+    color:var(--ink);
+    background:var(--paper);
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{ color:inherit; text-decoration:none; }
+  img{ max-width:100%; display:block; }
+  .wrap{ max-width:1200px; margin:0 auto; padding:0 24px; }
+
+  /* Bearing label device — used throughout as the site's signature navigation motif */
+  .bearing{
+    font-family:var(--ff-mono);
+    font-size:12px;
+    letter-spacing:2px;
+    color:var(--gold);
+    text-transform:uppercase;
+  }
+  .bearing::before{ content:"— "; }
+
+  /* Header */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:rgba(255,255,255,0.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:18px 24px;
+  }
+  .brand{ display:flex; align-items:center; gap:12px; }
+  .brand svg{ width:34px; height:34px; }
+  .brand-text{ font-family:var(--ff-display); font-weight:700; font-size:19px; letter-spacing:0.5px; }
+  .brand-text span{ display:block; font-family:var(--ff-mono); font-weight:500; font-size:10px; color:var(--slate); letter-spacing:3px; margin-top:1px;}
+  nav.links{ display:flex; gap:36px; align-items:center; }
+  nav.links a{ font-size:14px; font-weight:500; color:var(--ink); position:relative; padding:4px 0; }
+  nav.links a:hover{ color:var(--gold); }
+  .nav-cta{
+    background:var(--ink); color:#fff !important; padding:10px 20px;
+    font-size:13px; font-weight:600; border-radius:2px;
+  }
+  .nav-cta:hover{ background:var(--gold) !important; }
+  .menu-toggle{ display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:8px; }
+  .menu-toggle span{ width:24px; height:2px; background:var(--ink); display:block; }
+
+  /* Hero */
+  .hero{
+    position:relative;
+    padding:100px 24px 120px;
+    overflow:hidden;
+    background:
+      linear-gradient(var(--mist) 1px, transparent 1px),
+      linear-gradient(90deg, var(--mist) 1px, transparent 1px);
+    background-size: 48px 48px;
+    background-position: center;
+  }
+  .hero::before{
+    content:"";
+    position:absolute; inset:0;
+    background:radial-gradient(ellipse at 70% 20%, rgba(255,255,255,0.0) 0%, var(--paper) 72%);
+  }
+  .hero-inner{ position:relative; max-width:1200px; margin:0 auto; }
+  .hero .bearing{ display:block; margin-bottom:28px; }
+  h1{
+    font-family:var(--ff-display);
+    font-weight:600;
+    font-size:clamp(34px, 6vw, 68px);
+    line-height:1.1;
+    letter-spacing:-0.2px;
+    max-width:920px;
+  }
+  h1 em{ font-style:normal; color:var(--gold); }
+  .hero p.lead{
+    margin-top:28px; max-width:560px;
+    font-size:18px; color:var(--slate); line-height:1.6;
+  }
+  .hero-ctas{ display:flex; gap:16px; margin-top:44px; flex-wrap:wrap; }
+  .btn-primary{
+    background:var(--ink); color:#fff; padding:15px 30px;
+    font-weight:600; font-size:14px; border-radius:2px;
+    display:inline-flex; align-items:center; gap:10px;
+    transition:background 0.2s;
+  }
+  .btn-primary:hover{ background:var(--gold); }
+  .btn-secondary{
+    border:1px solid var(--line); padding:15px 30px;
+    font-weight:600; font-size:14px; border-radius:2px;
+    color:var(--ink);
+  }
+  .btn-secondary:hover{ border-color:var(--ink); }
+
+  /* Compass mark, positioned as a large watermark element */
+  .compass-mark{ position:absolute; right:-60px; top:40px; width:420px; height:420px; opacity:0.06; }
+  @media (max-width:900px){ .compass-mark{ display:none; } }
+
+  /* Sections */
+  section{ padding:96px 0; }
+  .section-alt{ background:var(--mist); }
+  .section-head{ max-width:640px; margin-bottom:56px; }
+  .section-head .bearing{ margin-bottom:16px; display:block; }
+  h2{
+    font-family:var(--ff-display);
+    font-weight:600;
+    font-size:clamp(26px, 4vw, 40px);
+    letter-spacing:-0.5px;
+    line-height:1.15;
+  }
+  .section-head p{ margin-top:16px; color:var(--slate); font-size:16px; line-height:1.65; }
+
+  /* Model statement */
+  .model{
+    display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:start;
+  }
+  @media (max-width:800px){ .model{ grid-template-columns:1fr; gap:36px; } }
+  .model-copy p{ color:var(--slate); font-size:16px; line-height:1.75; margin-bottom:18px; }
+  .model-copy strong{ color:var(--ink); }
+  .spec-card{
+    border:1px solid var(--line); background:var(--paper); padding:32px;
+  }
+  .spec-card .bearing{ margin-bottom:14px; }
+  .spec-row{
+    display:flex; justify-content:space-between; padding:12px 0; border-bottom:1px solid var(--line);
+    font-size:14px;
+  }
+  .spec-row:last-child{ border-bottom:none; }
+  .spec-row span:first-child{ color:var(--slate); }
+  .spec-row span:last-child{ font-family:var(--ff-mono); font-weight:500; font-size:13px; }
+
+  /* Sectors grid — mapped to cardinal bearings, matching the brand device */
+  .sector-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--line); border:1px solid var(--line); }
+  @media (max-width:900px){ .sector-grid{ grid-template-columns:1fr 1fr; } }
+  @media (max-width:520px){ .sector-grid{ grid-template-columns:1fr; } }
+  .sector-cell{ background:var(--paper); padding:36px 28px; transition:background 0.2s; }
+  .sector-cell:hover{ background:var(--mist); }
+  .sector-deg{ font-family:var(--ff-mono); font-size:12px; color:var(--gold); letter-spacing:1px; }
+  .sector-cell h3{ font-family:var(--ff-display); font-size:20px; margin:14px 0 10px; font-weight:600; }
+  .sector-cell p{ font-size:14px; color:var(--slate); line-height:1.6; }
+
+  /* Process strip */
+  .process-strip{ display:grid; grid-template-columns:repeat(4,1fr); gap:32px; }
+  @media (max-width:800px){ .process-strip{ grid-template-columns:1fr 1fr; } }
+  @media (max-width:480px){ .process-strip{ grid-template-columns:1fr; } }
+  .process-step .sector-deg{ font-family:var(--ff-mono); font-size:12px; color:var(--gold); }
+  .process-step h4{ font-family:var(--ff-display); font-size:17px; font-weight:600; margin:12px 0 8px; }
+  .process-step p{ font-size:14px; color:var(--slate); line-height:1.6; }
+  .process-step{ border-top:2px solid var(--ink); padding-top:20px; }
+
+  /* Capability strip */
+  .cap-list{ display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1px; background:var(--line); border:1px solid var(--line);}
+  .cap-item{ background:var(--paper); padding:28px; }
+  .cap-item h4{ font-family:var(--ff-display); font-size:15px; font-weight:600; margin-bottom:8px; }
+  .cap-item p{ font-size:13.5px; color:var(--slate); line-height:1.6; }
+
+  /* CTA band */
+  .cta-band{
+    background:var(--ink); color:#fff; padding:80px 24px; text-align:center;
+  }
+  .cta-band h2{ color:#fff; }
+  .cta-band p{ color:#B9C0CC; max-width:520px; margin:18px auto 36px; font-size:16px; }
+  .cta-band .btn-primary{ background:var(--gold); }
+  .cta-band .btn-primary:hover{ background:#fff; color:var(--ink); }
+
+  /* Footer */
+  footer{ padding:56px 24px 32px; border-top:1px solid var(--line); }
+  .footer-grid{ display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:40px; margin-bottom:48px; }
+  @media (max-width:800px){ .footer-grid{ grid-template-columns:1fr 1fr; } }
+  .footer-grid h5{ font-family:var(--ff-mono); font-size:11px; letter-spacing:2px; color:var(--slate); text-transform:uppercase; margin-bottom:16px; }
+  .footer-grid a, .footer-grid p{ font-size:14px; color:var(--ink); display:block; margin-bottom:10px; }
+  .footer-grid a:hover{ color:var(--gold); }
+  .footer-bottom{ display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; padding-top:24px; border-top:1px solid var(--line); }
+  .footer-bottom p{ font-size:12.5px; color:var(--slate); }
+
+  @media (max-width:480px){
+    .brand-mark{ width:205px !important; }
+  }
+  @media (max-width:820px){
+    nav.links{
+      display:none; position:absolute; top:100%; left:0; right:0;
+      background:#fff; border-bottom:1px solid var(--line);
+      flex-direction:column; gap:0; padding:8px 24px 20px;
+    }
+    nav.links.open{ display:flex; }
+    nav.links a{ padding:14px 0; border-bottom:1px solid var(--line); }
+    nav.links a.nav-cta{ text-align:center; margin-top:12px; border-bottom:none; }
+    .menu-toggle{ display:flex; }
+  }
+</style>
+</head>
+<body>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Bespoke wayfinding design and manufacture",
+  "provider": { "@type": "Organization", "name": "Meridian Wayfinding" },
+  "areaServed": "GB",
+  "description": "Design translation, manufacture and compliance management for bespoke architectural wayfinding systems."
+}
+</script>
+<header>
+  <div class="nav wrap">
+    <a href="index.html" class="brand">
+      <svg viewBox="0 0 720 220" style="width:260px;height:auto;" class="brand-mark" role="img" aria-label="Meridian Wayfinding"><title>Meridian Wayfinding</title>
+        <g transform="translate(10,25) scale(0.55)">
+          <circle cx="150" cy="150" r="121" fill="none" stroke="#C6A15B" stroke-width="3"/>
+          <g fill="#14213D">
+            <path d="M150 55 L163 137 L150 150 L137 137 Z"/>
+            <path d="M150 245 L163 163 L150 150 L137 163 Z"/>
+            <path d="M55 150 L137 137 L150 150 L137 163 Z"/>
+            <path d="M245 150 L163 137 L150 150 L163 163 Z"/>
+          </g>
+          <g fill="#C6A15B">
+            <path d="M150 95 L158 143 L150 150 L142 143 Z"/>
+            <path d="M95 150 L143 142 L150 150 L143 158 Z"/>
+          </g>
+        </g>
+        <text x="195" y="115" style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:58px;fill:#14213D;letter-spacing:1px;">MERIDIAN</text>
+        <text x="198" y="148" style="font-family:'Space Grotesk',sans-serif;font-weight:400;font-size:23px;fill:#C6A15B;letter-spacing:7px;">WAYFINDING</text>
+      </svg>
+    </a>
+    <nav class="links">
+      <a href="capability.html" style="color:#C6A15B;">Capability</a>
+      <a href="sectors.html">Sectors</a>
+      <a href="process.html">Process</a>
+      <a href="contact.html" class="nav-cta">Start a project</a>
+    </nav>
+    <button class="menu-toggle" aria-label="Menu" onclick="document.querySelector('nav.links').classList.toggle('open')"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<main>
+
+  <section class="hero" style="padding:80px 24px 60px;">
+    <div class="hero-inner">
+      <span class="bearing">Capability</span>
+      <h1 style="font-size:clamp(30px,5vw,52px);">From architect's drawing to installed, compliant signage.</h1>
+      <p class="lead">Everything between a detail design drawing and a finished building — design translation, material sourcing, manufacture, compliance, and installation — managed as one service.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="model">
+        <div class="model-copy">
+          <span class="bearing">Design translation</span>
+          <h2 style="margin-top:16px;margin-bottom:24px;">We speak both languages — architectural intent and manufacturing reality.</h2>
+          <p>An architect's drawing communicates intent: dimensions, materials, finishes, fixing method. Turning that into a buildable, compliant, cost-effective product takes a team that understands both sides — what the drawing is asking for, and what it actually takes to produce it at the quality and price a project needs.</p>
+          <p>We work directly from your detail design drawings, or help develop a specification where one doesn't yet exist, then manage every step from sample to sign-off to full production.</p>
+        </div>
+        <div class="spec-card">
+          <span class="bearing">What we manage</span>
+          <div class="spec-row"><span>Material sourcing</span><span>Matched to spec</span></div>
+          <div class="spec-row"><span>Sample production</span><span>Before full run</span></div>
+          <div class="spec-row"><span>Compliance docs</span><span>Fire / DDA / structural</span></div>
+          <div class="spec-row"><span>Quality control</span><span>Per batch</span></div>
+          <div class="spec-row"><span>Site installation</span><span>Scheduled fitting</span></div>
+          <div class="spec-row"><span>Handover</span><span>Full documentation</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-alt">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="bearing">Materials &amp; finishes</span>
+        <h2>Built in the materials your specification calls for.</h2>
+        <p>High-end buildings are specified in real materials — stone, metal, leather, textile — not just laminate and vinyl. We work in the same palette as the interior design, so wayfinding reads as part of the building rather than a retrofit onto it.</p>
+      </div>
+      <div class="cap-list">
+        <div class="cap-item"><h4>Metals</h4><p>Brass, bronze, stainless steel and aluminium — polished, brushed, satin, patinated or powder coated to any RAL or bespoke colour match.</p></div>
+        <div class="cap-item"><h4>Stone</h4><p>Marble, granite, slate and composite stone, as veneer or solid panel, for signage integrated directly into the architectural fabric.</p></div>
+        <div class="cap-item"><h4>Leather</h4><p>Wrapped, stitched or embossed leather panels and inserts, to any hide, colour and stitch specification for hospitality and premium interiors.</p></div>
+        <div class="cap-item"><h4>Fabric &amp; textile</h4><p>Upholstered, acoustic-backed or printed textile panels, colour and weave matched to interior schemes.</p></div>
+        <div class="cap-item"><h4>Acrylic &amp; laminates</h4><p>Printed, engraved or layered acrylic for illuminated and directory signage.</p></div>
+        <div class="cap-item"><h4>Tactile &amp; braille</h4><p>DDA and ADA-equivalent compliant room identification, tested to the relevant standard, in any of the above finishes.</p></div>
+        <div class="cap-item"><h4>Illuminated systems</h4><p>LED-backlit and edge-lit signage where visibility and evacuation requirements demand it.</p></div>
+        <div class="cap-item"><h4>Printed graphics</h4><p>Digitally printed or self-adhesive vinyl graphics, colour-matched to any brand specification.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <span class="bearing">Compliance</span>
+        <h2>Documentation your facilities team can actually rely on.</h2>
+        <p>Institutional buildings carry compliance requirements that generic signage suppliers often treat as an afterthought. We treat them as part of the spec.</p>
+      </div>
+      <div class="cap-list">
+        <div class="cap-item"><h4>Fire rating</h4><p>Confirmed appropriate to the building classification and location within it.</p></div>
+        <div class="cap-item"><h4>DDA / accessibility</h4><p>Tactile and visual contrast requirements met and documented per current standards.</p></div>
+        <div class="cap-item"><h4>Structural fixing</h4><p>Fixing method engineered to match the actual wall, ceiling or substrate condition on site.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="wrap">
+      <span class="bearing" style="color:#C6A15B;">Get in touch</span>
+      <h2 style="margin-top:16px;">Send us a drawing — we'll tell you what's achievable.</h2>
+      <p>No obligation, no catalogue pitch. Just a straight answer on cost, materials, and timeline.</p>
+      <a href="contact.html" class="btn-primary">Start a project →</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h5>Meridian Wayfinding</h5>
+        <p style="max-width:280px; color:#5B6472;">Bespoke wayfinding design and manufacture for institutional buildings, working directly to architects' specifications.</p>
+      </div>
+      <div>
+        <h5>Site</h5>
+        <a href="capability.html">Capability</a>
+        <a href="sectors.html">Sectors</a>
+        <a href="process.html">Process</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h5>Sectors</h5>
+        <a href="sectors.html">Universities</a>
+        <a href="sectors.html">Hospitals</a>
+        <a href="sectors.html">Airports</a>
+        <a href="sectors.html">Stadiums</a>
+        <a href="contact.html">+ your building type</a>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <a href="mailto:info@meridienwayfinding.co.uk">info@meridienwayfinding.co.uk</a>
+        <a href="tel:+442086292999">+44 (0)20 8629 2999</a>
+        <p>6 Blenheim Court, Welwyn Garden City, AL7 1AD</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Meridian Wayfinding. Part of the Herts Signs &amp; Graphics group, established 1993.</p>
+      <p>N 51.8° · W 0.2°</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

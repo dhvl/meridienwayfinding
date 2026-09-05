@@ -12,19 +12,36 @@ export default function Header() {
   const toggleMenu = () => setMenuOpen((prev) => !prev);
   const closeMenu = () => setMenuOpen(false);
 
+  const lastScrollY = useRef(0);
+  const scrollTimeout = useRef<NodeJS.Timeout | null>(null);
+
   useEffect(() => {
     let ticking = false;
 
     const handleScroll = () => {
+      const scrollY = window.scrollY || window.pageYOffset || 0;
+      const delta = Math.abs(scrollY - lastScrollY.current);
+      lastScrollY.current = scrollY;
+
       if (!ticking) {
         window.requestAnimationFrame(() => {
-          // Rotate 1 full turn (360deg) every 1200px scrolled for a smooth, natural compass drift
-          const scrollY = window.scrollY || window.pageYOffset || 0;
-          setRotation((scrollY * 0.3) % 360);
+          // Increased base rotation speed (approx 2.5x faster: 0.75 multiplier)
+          const baseRotation = scrollY * 0.75;
+          // Add dynamic magnetic needle jitter/flicker proportional to scroll movement
+          const jitter = (Math.random() - 0.5) * Math.min(delta * 0.6, 7.5);
+
+          setRotation(baseRotation + jitter);
           ticking = false;
         });
         ticking = true;
       }
+
+      // Settle needle when scrolling pauses/stops with a delicate magnetic settle vibration
+      if (scrollTimeout.current) clearTimeout(scrollTimeout.current);
+      scrollTimeout.current = setTimeout(() => {
+        const finalScrollY = window.scrollY || window.pageYOffset || 0;
+        setRotation(finalScrollY * 0.75);
+      }, 100);
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
@@ -32,6 +49,7 @@ export default function Header() {
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
+      if (scrollTimeout.current) clearTimeout(scrollTimeout.current);
     };
   }, []);
 
@@ -47,7 +65,7 @@ export default function Header() {
                 style={{
                   transformOrigin: '150px 150px',
                   transform: `rotate(${rotation}deg)`,
-                  transition: 'transform 0.15s cubic-bezier(0.2, 0, 0.2, 1)',
+                  transition: 'transform 0.08s cubic-bezier(0.15, 0.85, 0.35, 1.2)',
                   willChange: 'transform'
                 }}
               >

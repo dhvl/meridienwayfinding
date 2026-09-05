@@ -58,6 +58,11 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://www.meridianwayfinding.co.uk/',
   },
+  icons: {
+    icon: '/icon.svg',
+    shortcut: '/favicon.svg',
+    apple: '/icon.svg',
+  },
   openGraph: {
     type: 'website',
     locale: 'en_GB',
